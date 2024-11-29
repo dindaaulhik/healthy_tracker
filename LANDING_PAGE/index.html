@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Landing Page Healthy Tracker</title>
+    <style>
+        body {
+        overflow-x: hidden;
+        }
+
+        .text-outline {
+          color: transparent; 
+          -webkit-text-stroke: 2px #666; 
+          text-stroke: 2px #666; 
+        }
+      </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Tambahkan button toggle untuk mobile -->
+    <button id="mobile-menu-toggle" class="md:hidden absolute top-5 left-4 z-50">
+        <i class="ri-menu-line text-2xl"></i>
+    </button>
+
+    <!-- navigasi -->
+    <nav id="main-nav" class="fixed top-0 left-0 bottom-0 w-64 bg-white transform -translate-x-full transition-transform duration-300 ease-in-out 
+    md:relative md:translate-x-0 md:flex md:justify-between md:items-center md:px-16 md:py-4 md:shadow-sm md:w-full z-40">
+        <button id="mobile-menu-close" class="md:hidden absolute top-4 right-4">
+            <i class="ri-close-line text-2xl"></i>
+        </button>
+        <div class="nav__logo flex justify-center md:block mt-16 md:mt-0">
+            <a href="#">
+            <img src="logo_proyek(1).png" alt="logo" class="h-12 mx-auto" />
+            </a>
+        </div>
+        <ul class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-8 h-full md:h-auto">
+            <li><a href="#home" class="text-black hover:text-[#578669]">Home</a></li>
+            <li><a href="#program" class="text-black hover:text-[#578669]">Program</a></li>
+            <li><a href="#about" class="text-black hover:text-[#578669]">About</a></li>
+            <li>
+                <a href="/loginUtama/loginUtama.html" class="bg-[#578669] text-white px-6 py-2 rounded-full hover:bg-[#598066] transition">
+                    Daftar
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Overlay semi-transparan untuk nav mobile-->
+    <div id="nav-overlay" class="fixed inset-0 bg-black opacity-0 invisible transition-all duration-300 z-30 md:hidden"></div>
+
+
+    <!-- Navigasi -->
+    <!-- <nav class="flex flex-col md:flex-row justify-between items-center px-4 md:px-16 py-4 shadow-sm">
+        <div class="nav__logo mb-4 md:mb-0">
+            <a href="#">
+                <img src="logo_proyek(1).png" alt="logo" class="h-12" />
+            </a>
+        </div>
+        <ul class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
+            <li><a href="#home" class="text-black hover:text-[#578669]">Home</a></li>
+            <li><a href="#program" class="text-black hover:text-[#578669]">Program</a></li>
+            <li><a href="#about" class="text-black hover:text-[#578669]">About</a></li>
+            <li>
+                <a href="/loginUtama/loginUtama.html" class="bg-[#578669] text-white px-6 py-2 rounded-full hover:bg-[#598066] transition">
+                    Daftar
+                </a>
+            </li>
+        </ul>
+    </nav> -->
+
+    <!-- Header -->
+    <header class="container max-w-screen-xl px-4 md:px-16 py-5 grid grid-cols-1 md:grid-cols-2 gap-8" id="home">
+        <div class="header_content space-y-6 flex flex-col justify-center text-center md:text-left">
+            <h4 class="text-[#578669] font-semibold text-lg tracking-wide">
+                PELACAK KESEHATAN DAN KEBUGARAN TERBAIK
+            </h4>
+            <h1 class="text-3xl md:text-5xl font-bold text-[#333]">
+                <span class="text-outline">BUAT</span> PERUBAHAN KESEHATANMU
+            </h1>
+            <p class="text-gray-600 text-base md:text-lg">
+                Lepaskan potensimu dan mulailah perjalanan menuju tubuh yang sehat, bugar, dan lebih percaya diri. 
+                Daftar sekarang untuk 'Kesehatan Tubuhmu' dan saksikan perubahan luar biasa yang mampu dicapai oleh tubuhmu!
+            </p>
+
+        </div>
+        <div class="header_image flex justify-center items-center">
+            <img src="loginHR.png" alt="header" class="max-w-full h-auto"/>
+        </div>
+    </header>
+
+    <!-- Program -->
+    <section class="container max-w-screen-xl px-4 md:px-16 py-16" id="program">
+        <div class="text-center mb-16">
+            <h2 class="text-2xl md:text-4xl font-bold">PROGRAM HEALTHY TRACKER</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Program Card 1 -->
+            <div class="bg-white border rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition">
+                <span class="text-5xl text-[#578669] mb-4 block">
+                    <i class="ri-heart-pulse-fill"></i>
+                </span>
+                <h4 class="font-bold text-xl mb-3">Cek Kesehatan</h4>
+                <p class="text-gray-600 mb-4">
+                    Memberikan informasi kesehatan dari perhitungan BMI sebagai tolak ukur kesehatan.
+                </p>
+            </div>
+
+            <!-- Program Card 2 -->
+            <div class="bg-white border rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition">
+                <span class="text-5xl text-[#578669] mb-4 block">
+                    <i class="ri-run-line"></i>
+                </span>
+                <h4 class="font-bold text-xl mb-3">Olahraga</h4>
+                <p class="text-gray-600 mb-4">
+                    Membuat pengguna lebih produktivitas dengan melakukan 
+                    kegiatan olahraga agar badan tetap bugar.
+                </p>
+            </div>
+
+            <!-- Program Card 3 -->
+            <div class="bg-white border rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition">
+                <span class="text-5xl text-[#578669] mb-4 block">
+                    <i class="ri-boxing-fill"></i>
+                </span>
+                <h4 class="font-bold text-xl mb-3">Tantangan</h4>
+                <p class="text-gray-600 mb-4">
+                    Membuat pengguna memiliki target mingguan dengan mengikuti tantangan yang disediakan.
+                </p>
+            </div>
+
+            <!-- Program Card 4 -->
+            <div class="bg-white border rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition">
+                <span class="text-5xl text-[#578669] mb-4 block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="m-auto" width="1.1em" height="1.1em" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M11 14v8H7a3 3 0 0 1-3-3v-4a1 1 0 0 1 1-1zm8 0a1 1 0 0 1 1 1v4a3 3 0 0 1-3 3h-4v-8zM16.5 2a3.5 3.5 0 0 1 3.163 5H20a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-7V7h-2v5H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h.337A3.5 3.5 0 0 1 4 5.5C4 3.567 5.567 2 7.483 2c1.755-.03 3.312 1.092 4.381 2.934l.136.243c1.033-1.914 2.56-3.114 4.291-3.175zm-9 2a1.5 1.5 0 0 0 0 3h3.143C9.902 5.095 8.694 3.98 7.5 4m8.983 0c-1.18-.02-2.385 1.096-3.126 3H16.5a1.5 1.5 0 1 0-.017-3"/>
+                    </svg>
+                </span>
+                <h4 class="font-bold text-xl mb-3">Tukar Poin</h4>
+                <p class="text-gray-600 mb-4">
+                    Hasil poin yang telah dikumpulkan dari Tantangan dapat ditukar sesuai syarat dan ketentuan.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-16" id="about">
+        <div class="container mx-auto px-4 md:px-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h4 class="font-bold text-xl mb-4 text-gray-800">Hubungi Kami</h4>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-center space-x-2">
+                        <i class="ri-mail-line"></i>
+                        <span>info@healthytracker.com</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <i class="ri-phone-line"></i>
+                        <span>+62 812-3456-7890</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <i class="ri-map-pin-line"></i>
+                        <span>Jakarta, Indonesia</span>
+                    </li>
+                </ul>
+            </div>
+    
+            <div>
+                <h4 class="font-bold text-xl mb-4 text-gray-800">Ikuti Kami</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-2xl text-gray-600 hover:text-[#578669]">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+                    <a href="#" class="text-2xl text-gray-600 hover:text-[#578669]">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                    <a href="#" class="text-2xl text-gray-600 hover:text-[#578669]">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container mx-auto px-16 mt-8 pt-4 border-t border-gray-300 text-center text-gray-600">
+            <p>&copy; 2024 Healthy Tracker. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Tombol Navigasi Mobile-->
+    <script>
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mainNav = document.getElementById('main-nav');
+        const navOverlay = document.getElementById('nav-overlay');
+    
+        // Fungsi untuk membuka menu
+        function openMenu() {
+            mainNav.classList.remove('-translate-x-full');
+            navOverlay.classList.remove('invisible');
+            navOverlay.classList.remove('opacity-0');
+            navOverlay.classList.add('opacity-50');
+        }
+    
+        // Fungsi untuk menutup menu
+        function closeMenu() {
+            mainNav.classList.add('-translate-x-full');
+            navOverlay.classList.add('invisible');
+            navOverlay.classList.add('opacity-0');
+            navOverlay.classList.remove('opacity-50');
+        }
+    
+        // Event listener untuk membuka menu
+        mobileMenuToggle.addEventListener('click', openMenu);
+    
+        // Event listener untuk menutup menu
+        mobileMenuClose.addEventListener('click', closeMenu);
+    
+        // Menutup menu saat overlay diklik
+        navOverlay.addEventListener('click', closeMenu);
+    </script>
+</body>
+</html>
