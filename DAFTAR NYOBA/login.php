@@ -50,7 +50,7 @@
                     <div class="mb-4 relative">
                         <label for="password" class="block text-sm font-medium text-gray-700 mb-2">Password</label>
                         <input 
-                            type="password" 
+                            type="" 
                             id="pass" 
                             name="pass" 
                             required 
@@ -82,7 +82,7 @@
 
     <script>
         function togglePasswordVisibility() {
-            const passwordInput = document.getElementById("password");
+            const passwordInput = document.getElementById("pass");
             const eyeIcon = document.getElementById("eyeIcon");
 
             if (passwordInput.type === "password") {

@@ -46,7 +46,6 @@
                     </div>
                     <div class="mb-4 relative">
                         <input 
-                            type="password" 
                             name="pass" 
                             id="pass" 
                             placeholder="Buat Password" 
@@ -54,14 +53,13 @@
                         />
                         <span 
                             class="absolute top-1/2 right-2 transform -translate-y-1/2 cursor-pointer text-gray-500 hover:text-gray-700"
-                            onclick="togglePasswordVisibility('password', 'eyeIcon')"
+                            onclick="togglePasswordVisibility('pass', 'eyeIcon')"
                         >
                             <i id="eyeIcon" class="fas fa-eye"></i>
                         </span>
                     </div>
                     <div class="mb-4 relative">
                         <input 
-                            type="password" 
                             name="pass2" 
                             id="pass2" 
                             placeholder="Konfirmasi Password" 
@@ -69,7 +67,7 @@
                         />
                         <span 
                             class="absolute top-1/2 right-2 transform -translate-y-1/2 cursor-pointer text-gray-500 hover:text-gray-700"
-                            onclick="togglePasswordVisibility('password2', 'eyeIcon2')"
+                            onclick="togglePasswordVisibility('pass2', 'eyeIcon2')"
                         >
                             <i id="eyeIcon2" class="fas fa-eye"></i>
                         </span>
@@ -110,16 +108,20 @@
     </div>
 
     <script>
+        // Fungsi untuk toggle visibility password
         function togglePasswordVisibility(inputId, iconId) {
-            const passwordInput = document.getElementById(inputId);
-            const eyeIcon = document.getElementById(iconId);
+            var input = document.getElementById(inputId);
+            var icon = document.getElementById(iconId);
 
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                eyeIcon.classList.replace("fa-eye", "fa-eye-slash");
+            // Jika tipe input adalah password, ubah menjadi text dan ubah icon
+            if (input.type === "password") {
+                input.type = "text";  // Menampilkan password
+                icon.classList.remove("fa-eye");  // Ganti ikon mata
+                icon.classList.add("fa-eye-slash");
             } else {
-                passwordInput.type = "password";
-                eyeIcon.classList.replace("fa-eye-slash", "fa-eye");
+                input.type = "password";  // Menyembunyikan password
+                icon.classList.remove("fa-eye-slash");  // Ganti ikon mata
+                icon.classList.add("fa-eye");
             }
         }
     </script>
